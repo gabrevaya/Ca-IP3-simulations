@@ -20,7 +20,7 @@ const vᵣ = - 65.0
 const Vᵣₑᵥ = 130.0
 const α = 5.0
 const K_d = 0.32
-const P₀ = 0.8
+const P₀ = 10.0
 const ḡ = 0.00103
 const t_est = collect(1:1000/freq:1000)
 const τ_f = 200.0
@@ -29,7 +29,6 @@ const I_f = 0.5
 const I_s = 0.5
 
 Θ(x) = x < zero(x) ? zero(x) : one(x)
-# Θ(x) = x > zero(x) ? one(x) : zero(x)
 
 V(Ca, t, t_pre, Δt) = vᵣ + BPAP(t, t_pre, Δt) + EPSP_AMPA(t, t_pre) + EPSP_SK(Ca, t, t_pre, Δt)
 
